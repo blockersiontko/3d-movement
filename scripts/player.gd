@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const ACCELERATION = 45.0
 const DECELERATION = 20.0
 const SPEED = 5.0
@@ -19,10 +18,19 @@ var camera_start_pos: Vector3
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
+@export_range(50.0, 120.0, 1.0) var normal_fov: float = 120.0
+@export var sprint_fov_bonus: float = 15.0
+@export var fov_transition_speed: float = 8.0
+
+var checkpoint_position: Vector3
+var respawn_height: float = -50.0
+
 
 func _ready() -> void:
+	checkpoint_position = global_position
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	camera_start_pos = camera.position
+	camera.fov = normal_fov
 
 
 func _process(_delta: float) -> void:
@@ -38,6 +46,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	
+	if global_position.y < respawn_height:
+		respawn()
+	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -48,9 +60,11 @@ func _physics_process(delta: float) -> void:
 	var direction: Vector3 = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	var current_speed = SPEED
+	var target_fov = normal_fov
 
 	if Input.is_action_pressed("Sprint"):
 		current_speed = SPRINT_SPEED
+		target_fov = normal_fov + sprint_fov_bonus
 
 	if direction:
 		velocity.x = move_toward(velocity.x, direction.x * current_speed, ACCELERATION * delta)
@@ -62,6 +76,8 @@ func _physics_process(delta: float) -> void:
 	# HEAD BOB
 	t_bob += delta * Vector2(velocity.x, velocity.z).length() * float(is_on_floor())
 	camera.position = camera_start_pos + _headbob(t_bob)
+	
+	camera.fov = lerp(camera.fov, target_fov, fov_transition_speed * delta)
 
 	move_and_slide()
 
@@ -73,6 +89,11 @@ func toggle_menu() -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func respawn():
+	global_position = checkpoint_position
+	velocity = Vector3.ZERO
 
 
 func _headbob(time: float) -> Vector3:

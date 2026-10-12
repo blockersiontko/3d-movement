@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mtwq31oke8kt"]
 
 [ext_resource type="Script" uid="uid://d0tqpx5djnrxq" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://ppexqimckbub" path="res://scenes/crosshair.tscn" id="2_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 
@@ -15,8 +16,12 @@ shape = SubResource("CapsuleShape3D_g4v7s")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2064441323]
 mesh = SubResource("CapsuleMesh_yf5fn")
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=67367189]
+
+[node name="Crosshair" parent="UI" unique_id=813699421 instance=ExtResource("2_g2els")]
+
 [node name="Head" type="Node3D" parent="." unique_id=163902683]
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=619574980]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00024414063, 0.75656545, -0.58630407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00024414063, 0.82660306, -0.6342956)
 fov = 120.0
