@@ -1,0 +1,7 @@
+[gd_resource type="Environment" format=3 uid="uid://cb4v3nopq0v48"]
+
+[ext_resource type="Sky" uid="uid://bngwe2olipmyf" path="res://sky/day_overworld.tres" id="1_mkyh3"]
+
+[resource]
+background_mode = 2
+sky = ExtResource("1_mkyh3")

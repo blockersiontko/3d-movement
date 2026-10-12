@@ -1,0 +1,6 @@
+[gd_resource type="Sky" format=3 uid="uid://bngwe2olipmyf"]
+
+[ext_resource type="Material" uid="uid://bjgeji1w3j8me" path="res://sky/day_overworld_panorama.tres" id="1_fdrm1"]
+
+[resource]
+sky_material = ExtResource("1_fdrm1")

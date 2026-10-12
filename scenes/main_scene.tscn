@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b4st3nr1koeuv"]
+
+[ext_resource type="Environment" uid="uid://cb4v3nopq0v48" path="res://environments/day_overworld.tres" id="1_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://v8ae3e8xm8je" path="res://scenes/grass_platform.tscn" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://mtwq31oke8kt" path="res://scenes/player.tscn" id="2_pw63i"]
+
+[node name="MainScene" type="Node3D" unique_id=59868725]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=703498848]
+environment = ExtResource("1_7ykc4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=599167391]
+transform = Transform3D(1, 0, 0, 0, 0.7597065, 0.6502662, 0, -0.6502662, 0.7597065, 0, 15, 0)
+light_energy = 2.079
+light_indirect_energy = 1.22
+light_volumetric_fog_energy = 1.315
+light_angular_distance = 9.64
+light_specular = 3.349
+
+[node name="GrassPlatform" parent="." unique_id=1949656970 instance=ExtResource("1_w2twt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24984002, 0)
+
+[node name="Player" parent="." unique_id=1209154962 instance=ExtResource("2_pw63i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3316957, 0)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://v8ae3e8xm8je"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cg4fqbxvg5ba1" path="res://physics_materials/grass_platform.tres" id="1_cjh8t"]
+[ext_resource type="Material" path="res://materials/grass.tres" id="2_tf0qs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(26.931885, 1, 26.61914)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(4.486328, 1, 4.435547)
+
+[node name="GrassPlatform" type="StaticBody3D" unique_id=1949656970]
+physics_material_override = ExtResource("1_cjh8t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=321770862]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=271560973]
+transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0, 0)
+material_override = ExtResource("2_tf0qs")
+mesh = SubResource("BoxMesh_g4v7s")
