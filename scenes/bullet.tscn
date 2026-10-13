@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dhyor6x73bdb4"]
+
+[ext_resource type="PackedScene" uid="uid://bswtrqq8376k5" path="res://models/bullets/01_base_bullet/bullet.glb" id="1_mkf8s"]
+[ext_resource type="Material" uid="uid://bv4bjnwq3uu10" path="res://materials/ammo_metal.tres" id="2_y25gk"]
+
+[node name="bullet" unique_id=1197009270 instance=ExtResource("1_mkf8s")]
+
+[node name="Cylinder" parent="." index="0" unique_id=107213017]
+material_override = ExtResource("2_y25gk")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cbjha7i7br32a"]
+
+[ext_resource type="PackedScene" uid="uid://dhyor6x73bdb4" path="res://scenes/bullet.tscn" id="1_5rmea"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+radius = 1.0371094
+height = 12.360596
+
+[node name="Casing" type="RigidBody3D" unique_id=442469071]
+mass = 0.02
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=14693093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2116513, 0)
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="bullet" parent="." unique_id=1197009270 instance=ExtResource("1_5rmea")]
