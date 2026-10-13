@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bi5rx46c5j6jr" path="res://materials/ammo_material_albedo.png" id="1_gftxv"]
 
 [resource]
-cull_mode = 1
 albedo_color = Color(1, 1, 0, 1)
 albedo_texture = ExtResource("1_gftxv")
 metallic = 1.0
