@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bpqt2iauhkrkk"]
+
+[ext_resource type="Script" uid="uid://cthwrilxf0nnr" path="res://scripts/ammo_count.gd" id="1_b5mu5"]
+
+[node name="AmmoCount" type="Control" unique_id=543851453]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_b5mu5")
+
+[node name="AmmoCountLabel" type="Label" parent="." unique_id=1238203300]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ammo"
