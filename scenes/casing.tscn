@@ -4,13 +4,14 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 radius = 1.0371094
-height = 12.360596
+height = 6.2145424
 
 [node name="Casing" type="RigidBody3D" unique_id=442469071]
 mass = 0.02
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=14693093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2116513, 0)
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0.032718353, 0)
 shape = SubResource("CapsuleShape3D_g4v7s")
 
 [node name="bullet" parent="." unique_id=1197009270 instance=ExtResource("1_5rmea")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0)

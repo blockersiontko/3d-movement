@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ckj1xrr8wks8k"]
+
+[ext_resource type="PackedScene" uid="uid://dpw4b4hh5ev86" path="res://models/guns/01_pistol/gun.glb" id="1_buff3"]
+[ext_resource type="Material" uid="uid://c2it7lry4po6r" path="res://materials/gun_material.tres" id="2_1e3ry"]
+[ext_resource type="Script" uid="uid://dnijwsdnixt41" path="res://scripts/pistol.gd" id="2_t6oaa"]
+
+[node name="Pistol" unique_id=1617274135 instance=ExtResource("1_buff3")]
+script = ExtResource("2_t6oaa")
+
+[node name="Cube" parent="." index="0" unique_id=2093732923]
+material_override = ExtResource("2_1e3ry")
+
+[node name="CasingSpawn" type="Marker3D" parent="." index="1" unique_id=1729257612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7590318, 1.1741446, 0.64323246)

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2it7lry4po6r"]
+
+[ext_resource type="Texture2D" uid="uid://vk437edorsg6" path="res://materials/gun_material_albedo.png" id="1"]
+
+[resource]
+cull_mode = 2
+albedo_color = Color(0.34765625, 0.34765625, 0.34765625, 1)
+albedo_texture = ExtResource("1")
+metallic = 0.5
+roughness = 1.17
+emission_enabled = true
+emission = Color(0.23537064, 0.23537049, 0.23537052, 1)
+emission_energy_multiplier = 0.8

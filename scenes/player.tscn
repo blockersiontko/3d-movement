@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0tqpx5djnrxq" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://ppexqimckbub" path="res://scenes/crosshair.tscn" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://ckj1xrr8wks8k" path="res://scenes/pistol.tscn" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 
@@ -14,6 +15,7 @@ script = ExtResource("1_3vyb7")
 shape = SubResource("CapsuleShape3D_g4v7s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2064441323]
+visible = false
 mesh = SubResource("CapsuleMesh_yf5fn")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=67367189]
@@ -25,3 +27,13 @@ mesh = SubResource("CapsuleMesh_yf5fn")
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=619574980]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00024414063, 0.82660306, -0.6342956)
 fov = 120.0
+
+[node name="Hand" type="Node3D" parent="Head/Camera3D" unique_id=1923896476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00024414063, -0.82660306, 0.6342956)
+
+[node name="LeftHand" type="Node3D" parent="Head/Camera3D/Hand" unique_id=1004176680]
+
+[node name="RightHand" type="Node3D" parent="Head/Camera3D/Hand" unique_id=512208127]
+
+[node name="Pistol" parent="Head/Camera3D/Hand" unique_id=1617274135 instance=ExtResource("3_qhqgy")]
+transform = Transform3D(-4.371139e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.371139e-09, 0.3806494, 0.4513644, -0.7222098)
