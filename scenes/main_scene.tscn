@@ -22,3 +22,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24984002, 0)
 
 [node name="Player" parent="." unique_id=1209154962 instance=ExtResource("2_pw63i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3316957, 0)
+
+[node name="GrassPlatform2" parent="." unique_id=515560829 instance=ExtResource("1_w2twt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.595173, 1.0883002, -32.733833)
+
+[node name="GrassPlatform3" parent="." unique_id=579805907 instance=ExtResource("1_w2twt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43019342, -32.729607)
+
+[node name="GrassPlatform4" parent="." unique_id=929788873 instance=ExtResource("1_w2twt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24984002, -16.45702)
+
+[node name="GrassPlatform5" parent="." unique_id=511404094 instance=ExtResource("1_w2twt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.903847, 1.900028, -32.677032)
