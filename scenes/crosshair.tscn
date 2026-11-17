@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ppexqimckbub"]
 
 [ext_resource type="Texture2D" uid="uid://b2utbrmrucuyx" path="res://textures/crosshair/crosshair.png" id="1_6blvt"]
-[ext_resource type="Script" uid="uid://bnlxro4mmkhhu" path="res://scripts/crosshair_control.gd" id="1_norqy"]
 
 [node name="Crosshair" type="Control" unique_id=813699421]
 layout_mode = 3
@@ -9,7 +8,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
-script = ExtResource("1_norqy")
 
 [node name="Texture" type="TextureRect" parent="." unique_id=1279514098]
 texture_filter = 1

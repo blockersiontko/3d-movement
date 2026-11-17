@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b7c42h3l5okte"]
+
+[ext_resource type="PackedScene" uid="uid://ppexqimckbub" path="res://scenes/crosshair.tscn" id="1_x4jx1"]
+[ext_resource type="Script" uid="uid://ct5o4j4a1rwoq" path="res://scripts/ui.gd" id="1_yev5y"]
+[ext_resource type="PackedScene" uid="uid://bpqt2iauhkrkk" path="res://scenes/ammo_count.tscn" id="2_yev5y"]
+[ext_resource type="Texture2D" uid="uid://3ihm1j0d2cog" path="res://sprites/E_KEYBIND.png" id="3_gdt2y"]
+
+[node name="UI" type="CanvasLayer" unique_id=852899573]
+script = ExtResource("1_yev5y")
+
+[node name="UI" type="Control" parent="." unique_id=1459771313]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AmmoCount" parent="UI" unique_id=543851453 instance=ExtResource("2_yev5y")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Crosshair" parent="UI" unique_id=813699421 instance=ExtResource("1_x4jx1")]
+z_index = 1
+layout_mode = 0
+offset_left = 960.0
+offset_top = 540.0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="ContextComponent" type="CenterContainer" parent="UI" unique_id=941813000]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ContextComponent" unique_id=397315019]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/ContextComponent/HBoxContainer" unique_id=649347117]
+texture_filter = 1
+custom_maximum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_gdt2y")
+
+[node name="Label" type="Label" parent="UI/ContextComponent/HBoxContainer" unique_id=209039721]
+layout_mode = 2
+text = "dsdsadasad"

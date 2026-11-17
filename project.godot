@@ -18,6 +18,7 @@ config/icon="res://textures/placeholder/icon.svg"
 [autoload]
 
 Autoloads="*uid://dachyoy8yfx4s"
+Ui="*uid://b7c42h3l5okte"
 
 [display]
 

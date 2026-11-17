@@ -8,7 +8,7 @@ extends Node3D
 var can_shoot := true
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Shoot") and can_shoot and not Autoloads.pistol_is_reloading:
 		shoot()
 		
